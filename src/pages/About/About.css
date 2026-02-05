@@ -1,0 +1,752 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   OUR STORY SECTION 
+========================= */
+.our-story-section {
+    position: relative;
+    padding: 120px 0;
+    background:
+        linear-gradient(180deg, #050b1e, #050b1e);
+    color: #cbd5e1;
+    overflow: hidden;
+}
+
+/* =========================
+   TITLE
+========================= */
+.story-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.story-title span {
+    color: #2ea8ff;
+}
+
+.story-line {
+    width: 60px;
+    height: 3px;
+    background: #2ea8ff;
+    margin: 14px 0 30px;
+    border-radius: 10px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.our-story-section p {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #9fb3c8;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   STATS GRID
+========================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* =========================
+   STAT CARD BASE
+========================= */
+.stat-card {
+    position: relative;
+    padding: 36px 20px;
+    text-align: center;
+    border-radius: 18px;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* =========================
+   CORNER LINE
+========================= */
+.hover-corner {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.hover-corner::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-top: 2px solid #2ea8ff;
+    border-right: 2px solid #2ea8ff;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(46, 168, 255, 0.35) 0px 3px 8px;
+    background: linear-gradient(180deg,
+            rgba(46, 168, 255, 0.08),
+            rgba(255, 255, 255, 0.02));
+}
+
+.stat-card:hover .hover-corner::before {
+    width: 26px;
+    height: 26px;
+    opacity: 1;
+}
+
+/* =========================
+   STAT TEXT
+========================= */
+.stat-card h3 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #2ea8ff, #6ed6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #b6c7da;
+    margin: 0;
+}
+
+/* =========================
+   FEATURES
+========================= */
+.story-features {
+    display: flex;
+    gap: 22px;
+    margin-top: 32px;
+    font-size: 14px;
+    color: #9ecbff;
+}
+
+.story-features span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .stats-grid {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .story-title {
+        font-size: 32px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* =========================
+  TIMELINE STORY SECTION BASE
+========================= */
+.journey-section {
+    position: relative;
+    padding: 120px 0;
+    background:
+        linear-gradient(180deg, #050b1e, #050b1e);
+    color: #cbd5e1;
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+.journey-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.journey-header h2 span {
+    color: #2ea8ff;
+}
+
+.journey-header p {
+    margin-top: 10px;
+    color: #9fb3c8;
+    font-size: 15px;
+}
+
+.journey-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ea8ff, #6ed6ff);
+    margin: 18px auto 60px;
+    border-radius: 10px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(180deg,
+            transparent,
+            #2ea8ff,
+            transparent);
+    transform: translateX(-50%);
+}
+
+/* =========================
+   ITEM
+========================= */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+/* =========================
+   CARD
+========================= */
+.timeline-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 28px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    transition: all 0.4s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: rgba(46, 168, 255, 0.35) 0px 3px 8px;
+}
+
+.timeline-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #6ed6ff;
+    margin-bottom: 6px;
+}
+
+.timeline-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    font-size: 14px;
+    color: #a8bdd4;
+    margin: 0;
+}
+
+/* =========================
+   DOT
+========================= */
+.timeline-dot {
+    position: absolute;
+    top: 38px;
+    width: 14px;
+    height: 14px;
+    background: #2ea8ff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(46, 168, 255, 0.15);
+    animation: pulseDot 2.5s infinite;
+}
+
+.timeline-item.left .timeline-dot {
+    right: -7px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -7px;
+}
+
+/* =========================
+   DOT ANIMATION
+========================= */
+@keyframes pulseDot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(46, 168, 255, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(46, 168, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 168, 255, 0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 3px !important;
+    }
+}
+
+
+/* =========================
+   SECTION BASE
+========================= */
+.core-values-section {
+    padding: 120px 0;
+    background:
+        linear-gradient(180deg, #050b1e, #050b1e);
+    color: #cbd5e1;
+}
+
+/* =========================
+   HEADER
+========================= */
+.core-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.core-header h2 span {
+    color: #2ea8ff;
+}
+
+.core-header p {
+    margin-top: 10px;
+    color: #9fb3c8;
+    font-size: 15px;
+}
+
+.core-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ea8ff, #6ed6ff);
+    margin: 18px auto 60px;
+    border-radius: 10px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+.core-card {
+    position: relative;
+    height: 100%;
+    padding: 36px 28px 42px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* =========================
+   BORDER BOTTOM LINE
+========================= */
+.bottom-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2ea8ff, transparent);
+    transform: translateX(-50%);
+    transition: width 0.45s ease;
+    box-shadow: 0 0 12px rgba(46, 168, 255, 0.8);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+.core-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(46, 168, 255, 0.35);
+}
+
+.core-card:hover .bottom-border {
+    width: 90%;
+}
+
+/* =========================
+   ACTIVE CARD
+========================= */
+.core-card.active .bottom-border {
+    width: 90%;
+}
+
+/* =========================
+   NUMBER
+========================= */
+.core-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   ICON
+========================= */
+.core-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(46, 168, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.core-icon span {
+    font-size: 22px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.core-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.core-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a8bdd4;
+    margin: 0;
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+.core-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   ICON
+========================= */
+.core-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(46, 168, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.core-icon span {
+    font-size: 22px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.core-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.core-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a8bdd4;
+    margin: 0;
+}
+
+
+
+
+
+/* =========================
+   SECTION
+========================= */
+.why-webzenyx {
+    padding: 100px 0;
+    background:
+        linear-gradient(180deg, #050b1e, #050b1e);
+}
+
+/* =========================
+   HEADER
+========================= */
+.why-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.why-header h2 span {
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.why-header p {
+    max-width: 720px;
+    margin: 14px auto 0;
+    color: #6c7a89;
+    font-size: 16px;
+}
+
+/* =========================
+   CARD
+========================= */
+.why-card-webzenyx {
+    position: relative;
+    height: 100%;
+    padding: 36px 28px 42px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.why-card-webzenyx:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(13, 110, 253, 0.25);
+}
+
+/* =========================
+   ICON
+========================= */
+.why-icon-webzenyx {
+    width: 48px;
+    height: 48px;
+    background: #eef4ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: all 0.35s ease;
+}
+
+.why-card-webzenyx:hover .why-icon-webzenyx {
+    background: linear-gradient(135deg, #0d6efd, #00c6ff);
+    color: #ffffff;
+}
+
+/* =========================
+   TEXT
+========================= */
+.why-card-webzenyx h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.why-card-webzenyx p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a8bdd4;
+    margin: 0;
+}
+
+/* =========================
+   BOTTOM BORDER
+========================= */
+.bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+.why-card-webzenyx:hover .bottom-line {
+    width: 90%;
+}
+
+
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section {
+    padding: 120px 0;
+    background:
+        linear-gradient(180deg, #050b1e, #050b1e);
+}
+
+/* =========================
+   CTA CARD
+========================= */
+.cta-card {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* =========================
+   GRADIENT BORDER
+========================= */
+.cta-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    padding: 1px;
+    background: linear-gradient(90deg, #0d6efd, #00c6ff, #8b5cf6);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* =========================
+   TEXT
+========================= */
+.cta-card h2 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.cta-card h2 span {
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-card p {
+    max-width: 620px;
+    margin: 0 auto 36px;
+    font-size: 16px;
+    color: #a9b8d4;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #0d6efd, #8b5cf6);
+    box-shadow: 0 12px 30px rgba(13, 110, 253, 0.45);
+    transition: all 0.35s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: rgba(139, 92, 246, 0.55) 0px 3px 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .cta-card {
+        padding: 60px 18px;
+    }
+
+    .cta-card h2 {
+        font-size: 34px;
+    }
+}

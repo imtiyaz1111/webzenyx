@@ -1,0 +1,250 @@
+.portfolio {
+    background: #020617;
+    padding: 80px 0;
+    color: white;
+}
+
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+.tab.active {
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+
+/* ===== CARD ===== */
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+
+.project-card:hover {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 30px rgba(14, 165, 233, .25);
+    transform: translateY(-6px);
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(14, 165, 233, .1);
+    color: #0ea5e9;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    z-index: 3;
+}
+
+/* IMAGE */
+.img-wrap {
+    position: relative;
+    height: 200px;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HOVER OVERLAY EXACT */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    transition: .4s;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+/* CONTENT */
+.content {
+    padding: 14px;
+}
+
+.content h5 {
+    margin: 0 0 6px;
+}
+
+.content p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, .06);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* BOTTOM LINE */
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #0ea5e9, #8b5cf6);
+    transition: .4s;
+}
+
+.project-card:hover .bottom {
+    width: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+    .img-wrap {
+        height: 160px
+    }
+}
+
+
+
+/* ================CTA section ================= */
+
+.project-cta {
+    background: #020617;
+    padding: 90px 0;
+    color: white;
+}
+
+/* CARD */
+.cta-box {
+    background: linear-gradient(180deg, #0b1424, #08101d);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+
+    padding: 70px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+/* HOVER GLOW */
+.cta-box:hover {
+    border-color: #6366f1;
+    box-shadow: 0 0 40px rgba(99, 102, 241, .2);
+}
+
+/* TITLE */
+.title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.grad {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+.text {
+    color: #94a3b8;
+    font-size: 15px;
+    max-width: 640px;
+    margin: 0 auto 22px;
+    line-height: 1.7;
+}
+
+/* BUTTON */
+.cta-btn {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border: none;
+    padding: 11px 20px;
+    border-radius: 12px;
+
+    color: white;
+    font-size: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(99, 102, 241, .4);
+}
+
+/* CORNER LINES */
+.line {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.tl {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #3b82f6;
+    border-left: 2px solid #3b82f6;
+}
+
+.br {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #8b5cf6;
+    border-right: 2px solid #8b5cf6;
+}
+
+.cta-box:hover .line {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .title {
+        font-size: 26px
+    }
+
+    .text {
+        font-size: 14px;
+        padding: 0 10px
+    }
+
+    .cta-box {
+        padding: 50px 14px
+    }
+}
